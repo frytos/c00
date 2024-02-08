@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*   ft_print_comb3.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: argrouss <argrouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 19:29:37 by argrouss          #+#    #+#             */
-/*   Updated: 2024/02/08 20:37:35 by argrouss         ###   ########.fr       */
+/*   Updated: 2024/02/08 23:01:07 by argrouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,38 +22,29 @@ int	main(void)
 
 void	ft_print_comb(void)
 {
-	int	a;
-	int	b;
-	int	c;
-	int	comma;
-	int	space;
+	char	nb_f[6];
 
-	a = 48;
-	comma = 44;
-	space = 0;
-	while (a < 58)
+	nb_f[0] = 48;
+	while (nb_f[0] < 58)
 	{
-		b = 48;
-		while (b < 58)
+		nb_f[1] = 48;
+		while ( nb_f[1] < 58)
 		{
-			c = 48;
-			while (c < 58)
+			nb_f[2] = 48;
+			while (nb_f[2] < 58)
 			{
-				if (a < b && b < c)
+				if (nb_f[0] < nb_f[1] && nb_f[1] < nb_f[2])
 				{
-					write(1, &a, 1);
-					write(1, &b, 1);
-					write(1, &c, 1);
-					if (a != 7 && b != 8 && c != 9)
+					write(1, &nb_f, 5);
+					if (nb_f == "789, ")
 					{
-						write(1, &comma, 1);
-						write(1, &space, 1);
+						write(1, &nb_f, 3);
 					}
 				}
-				c++;
+				nb_f[2]++;
 			}
-			b++;
+			nb_f[1]++;
 		}
-		a++;
+		nb_f[0]++;
 	}
 }
