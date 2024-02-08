@@ -6,7 +6,7 @@
 /*   By: argrouss <argrouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 14:43:07 by argrouss          #+#    #+#             */
-/*   Updated: 2024/02/08 16:22:15 by argrouss         ###   ########.fr       */
+/*   Updated: 2024/02/08 17:30:05 by argrouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,11 @@ void	ft_print_alphabet(void)
 	int	c;
 
 	c = 97;
-	do
+	while (c < 123)
 	{
 		write(1, &c, 1);
-	c++;
-}
-
-while (c < 123);
+		c++;
+	}
 }
 
 int	main(void)
