@@ -13,54 +13,79 @@
 #include <unistd.h>
 
 void    ft_printcombn(int n);
-void	increment_and_print(int n, int index, char *nb_char);
+void	print_nb(char *nb_char, char n, char is_first);
+void	increment(char *nb_char, char n, char rank);
 void    ft_putchar(char c);
 
 int	main(void)
 {
 	//ft_printcombn(0);
 	ft_printcombn(2);
+	ft_putchar(10);
 	ft_printcombn(9);
-	ft_printcombn(10);
+	//ft_printcombn(10);
 	return (0);
 }
 
 void	ft_printcombn(int n)
 {
-	int	index;
+	char	index;
 	char	nb_char[9 + 1];
 
 	index = 0;
 	while (index < n) //initialisation du premier nombre
 	{
-		nb_char[index] = index + '0';
+		nb_char[index] = index;
 		index++;
 	}
 	nb_char[index] = 0;
-	
+	print_nb(nb_char, n, 1);
 	index = 0;
-	while (1)
+	while (nb_char[0] != 10 - n || nb_char[n - 1] != 9) //checks if units 9 is reach or max tens is rechest
 	{
-		increment_and_print(n, 0, nb_char);
+		if (nb_char[n - 1] != 9)
+		{
+			nb_char[n - 1]++;
+		}
+		else
+		{
+			increment(nb_char, n, 0);
+		}
+		print_nb(nb_char, n, 0);
 	}
 }
 
-void	increment_and_print(int n, int index, char *nb_char)
+void	increment(char *nb_char, char n, char rank)
 {
-	
-	write(1, nb_char, n);
-	ft_putchar(35);
-	if (nb_char[n - 1 - index] < 10 - n + index + 1 + '0')
+	while (nb_char[n - rank - 1] == 9 - rank)
 	{
-		nb_char[n - 1 - index]++;
+		rank++;
 	}
-	else
+	nb_char[n - rank - 1]++;
+	while (rank > 0)
 	{
-		nb_char[n - 1 - index - 1] = index + '0';
-		nb_char[n - 1 - index]++;
-		increment_and_print(n, index, nb_char);
+		nb_char[n - rank] = nb_char[n - rank - 1] + 1;
+		rank--;
 	}
 }	
+
+void	print_nb(char *nb_char, char n, char is_first)
+{
+	char	index;
+	
+	
+	if (!is_first)
+	{
+		ft_putchar(',');
+		ft_putchar(' ');
+	}
+	index = 0;
+	while (index < n)
+	{
+		ft_putchar(nb_char[index] + '0');
+		index++;
+	}
+}
 
 void    ft_putchar(char c)
 {
