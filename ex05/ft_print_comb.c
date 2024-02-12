@@ -16,12 +16,6 @@
 void	ft_print_comb(void);
 void	check_to_print(char *nb_to_check, size_t nb_to_check_size);
 
-int	main(void)
-{
-	ft_print_comb();
-	return (0);
-}
-
 void	ft_print_comb(void)
 {
 	char	nb_f[6];
@@ -63,3 +57,9 @@ void	check_to_print(char *nb_to_check, size_t nb_to_check_size)
 		}
 	}
 }
+
+// int	main(void)
+// {
+// 	ft_print_comb();
+// 	return (0);
+// }

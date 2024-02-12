@@ -14,12 +14,6 @@
 
 void	ft_print_numbers(void);
 
-int	main(void)
-{
-	ft_print_numbers();
-	return (0);
-}
-
 void	ft_print_numbers(void)
 {
 	char	c;
@@ -31,3 +25,9 @@ void	ft_print_numbers(void)
 		c++;
 	}
 }
+
+// int	main(void)
+// {
+// 	ft_print_numbers();
+// 	return (0);
+// }

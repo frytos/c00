@@ -14,14 +14,6 @@
 
 void	ft_is_negative(int n);
 
-int	main(void)
-{
-	ft_is_negative(-3);
-	ft_is_negative(0);
-	ft_is_negative(7);
-	return (0);
-}
-
 void	ft_is_negative(int n)
 {
 	int	pos;
@@ -38,3 +30,11 @@ void	ft_is_negative(int n)
 		write(1, &neg, 1);
 	}
 }
+
+// int	main(void)
+// {
+// 	ft_is_negative(-3);
+// 	ft_is_negative(0);
+// 	ft_is_negative(7);
+// 	return (0);
+// }

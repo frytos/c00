@@ -15,12 +15,6 @@
 void	ft_print_comb2(void);
 void	print_duo(int first, int second);
 
-int	main(void)
-{
-	ft_print_comb2();
-	return (0);
-}
-
 void	ft_print_comb2(void)
 {
 	int	first_nb;
@@ -68,3 +62,9 @@ void	print_duo(int first, int second)
 	}
 	write(1, duo_string, duo_string_size);
 }
+
+// int	main(void)
+// {
+// 	ft_print_comb2();
+// 	return (0);
+// }

@@ -17,22 +17,6 @@ void	*recursive_print(int nb, char *nb_char, int index);
 void	reverse_print(char *nb_char);
 void	ft_putchar(char digit);
 
-int	main(void)
-{
-	ft_putnbr(0); ft_putchar(10);
-	ft_putnbr(5); ft_putchar(10);
-	ft_putnbr(42); ft_putchar(10);
-	ft_putnbr(-42); ft_putchar(10);
-	ft_putnbr(-3); ft_putchar(10);
-	ft_putnbr(1234567890); ft_putchar(10);
-	ft_putnbr(-1994); ft_putchar(10);
-	ft_putnbr(2147483647); ft_putchar(10);
-	ft_putnbr(-2147483648); ft_putchar(10);
-	ft_putnbr('a'); ft_putchar(10);
-
-	return (0);
-}
-
 void	ft_putnbr(int nb)
 {
 	char	nb_char[12];
@@ -85,3 +69,18 @@ void	ft_putchar(char digit)
 {
 	write(1, &digit, 1);
 }
+
+// int	main(void)
+// {
+// 	ft_putnbr(0); ft_putchar(10);
+// 	ft_putnbr(5); ft_putchar(10);
+// 	ft_putnbr(42); ft_putchar(10);
+// 	ft_putnbr(-42); ft_putchar(10);
+// 	ft_putnbr(-3); ft_putchar(10);
+// 	ft_putnbr(1234567890); ft_putchar(10);
+// 	ft_putnbr(-1994); ft_putchar(10);
+// 	ft_putnbr(2147483647); ft_putchar(10);
+// 	ft_putnbr(-2147483648); ft_putchar(10);
+// 	ft_putnbr('a'); ft_putchar(10);
+// 	return (0);
+// }

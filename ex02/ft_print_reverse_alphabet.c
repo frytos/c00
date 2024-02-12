@@ -14,12 +14,6 @@
 
 void	ft_print_reverse_alphabet(void);
 
-int	main(void)
-{
-	ft_print_reverse_alphabet();
-	return (0);
-}
-
 void	ft_print_reverse_alphabet(void)
 {
 	int	c;
@@ -31,3 +25,9 @@ void	ft_print_reverse_alphabet(void)
 		c--;
 	}
 }
+
+// int	main(void)
+// {
+// 	ft_print_reverse_alphabet();
+// 	return (0);
+// }
