@@ -6,32 +6,48 @@
 /*   By: argrouss <argrouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 10:44:45 by argrouss          #+#    #+#             */
-/*   Updated: 2024/02/12 11:51:34 by argrouss         ###   ########.fr       */
+/*   Updated: 2024/02/12 23:16:10 by argrouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void    ft_printcombn(int n);
-void	print_nb(char *nb_char, char n, char is_first);
-void	increment(char *nb_char, char n, char rank);
+void    ft_print_combn(int n);
+void	print_nb(int *nb_char, char n, char is_first);
+void	increment(int *nb_char, char n, char rank);
 void    ft_putchar(char c);
 
 int	main(void)
 {
-	//ft_printcombn(0);
-	ft_printcombn(2);
-	ft_putchar(10);
-	ft_printcombn(9);
-	//ft_printcombn(10);
+	ft_print_combn(1);
+	ft_putchar(10); ft_putchar(10);
+	ft_print_combn(2);
+	ft_putchar(10); ft_putchar(10);
+	ft_print_combn(3);
+	ft_putchar(10); ft_putchar(10);
+	ft_print_combn(4);
+	ft_putchar(10); ft_putchar(10);
+	ft_print_combn(5);
+	ft_putchar(10); ft_putchar(10);
+	ft_print_combn(6);
+	ft_putchar(10); ft_putchar(10);
+	ft_print_combn(7);
+	ft_putchar(10); ft_putchar(10);
+	ft_print_combn(8);
+	ft_putchar(10); ft_putchar(10);
+	ft_print_combn(9);
 	return (0);
 }
 
-void	ft_printcombn(int n)
+void	ft_print_combn(int n)
 {
-	char	index;
-	char	nb_char[9 + 1];
+	int 	index;
+	int 	nb_char[9 + 1];
 
+	if (n < 1 || n > 9)
+	{
+			return;
+	}
 	index = 0;
 	while (index < n) //initialisation du premier nombre
 	{
@@ -55,7 +71,7 @@ void	ft_printcombn(int n)
 	}
 }
 
-void	increment(char *nb_char, char n, char rank)
+void	increment(int *nb_char, char n, char rank)
 {
 	while (nb_char[n - rank - 1] == 9 - rank)
 	{
@@ -69,9 +85,9 @@ void	increment(char *nb_char, char n, char rank)
 	}
 }	
 
-void	print_nb(char *nb_char, char n, char is_first)
+void	print_nb(int *nb_char, char n, char is_first)
 {
-	char	index;
+	int 	index;
 	
 	
 	if (!is_first)
