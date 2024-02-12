@@ -61,10 +61,10 @@ void	print_duo(int first, int second)
 	duo_string[5] = 44;
 	duo_string[6] = 32;
 	duo_string[7] = '\0';
-	duo_string_size = 7;
+	duo_string_size = 8;
 	if (first == 98 && second == 99)
 	{
-		duo_string_size = duo_string_size - 2;
+		duo_string_size = duo_string_size - 3;
 	}
 	write(1, duo_string, duo_string_size);
 }

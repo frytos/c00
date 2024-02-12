@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_comb.c                                    :+:      :+:    :+:   */
+/*   ft_print_comb4.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: argrouss <argrouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 19:29:37 by argrouss          #+#    #+#             */
-/*   Updated: 2024/02/08 20:37:35 by argrouss         ###   ########.fr       */
+/*   Updated: 2024/02/09 02:38:56 by argrouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+#include <stdio.h>
 
 void	ft_print_comb(void);
+void	check_to_print(char *nb_to_check, size_t nb_to_check_size);
 
 int	main(void)
 {
@@ -22,38 +24,42 @@ int	main(void)
 
 void	ft_print_comb(void)
 {
-	int	a;
-	int	b;
-	int	c;
-	int	comma;
-	int	space;
+	char	nb_f[6];
+	size_t	nb_f_size;
 
-	a = 48;
-	comma = 44;
-	space = 0;
-	while (a < 58)
+	nb_f[0] = 48;
+	nb_f[3] = 44;
+	nb_f[4] = 32;
+	nb_f[5] = '\0';
+	nb_f_size = 6;
+	while (nb_f[0] < 58)
 	{
-		b = 48;
-		while (b < 58)
+		nb_f[1] = 48;
+		while (nb_f[1] < 58)
 		{
-			c = 48;
-			while (c < 58)
+			nb_f[2] = 48;
+			while (nb_f[2] < 58)
 			{
-				if (a < b && b < c)
-				{
-					write(1, &a, 1);
-					write(1, &b, 1);
-					write(1, &c, 1);
-					if (a != 7 && b != 8 && c != 9)
-					{
-						write(1, &comma, 1);
-						write(1, &space, 1);
-					}
-				}
-				c++;
+				check_to_print(nb_f, nb_f_size);
+				nb_f[2]++;
 			}
-			b++;
+			nb_f[1]++;
 		}
-		a++;
+		nb_f[0]++;
+	}
+}
+
+void	check_to_print(char *nb_to_check, size_t nb_to_check_size)
+{
+	if (nb_to_check[0] < nb_to_check[1] && (nb_to_check[1] < nb_to_check[2]))
+	{
+		write(1, nb_to_check, nb_to_check_size);
+		if (nb_to_check[0] == 55 && nb_to_check[1] == 56)
+		{
+			if (nb_to_check[2] == 57)
+			{
+				write(1, nb_to_check, nb_to_check_size - 3);
+			}
+		}
 	}
 }
