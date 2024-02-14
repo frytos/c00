@@ -11,19 +11,23 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdlib.h> // For testing only
+// #include <stdlib.h> // For testing only
 
 void	ft_print_combn(int n);
 void	print_nb(int *nb_char, char n, char is_first);
 void	increment(int *nb_char, char n, char rank);
-void	check_n_and_init(int n, int *nb_char);
+void	init(int n, int *nb_char);
 void	ft_putchar(char c);
 
 void	ft_print_combn(int n)
 {
 	int	nb_char[9 + 1];
 
-	check_n_and_init(n, nb_char);
+	if (n < 1 || n > 9)
+	{
+		return ;
+	}
+	init(n, nb_char);
 	print_nb(nb_char, n, 1);
 	while (nb_char[0] != 10 - n || nb_char[n - 1] != 9)
 	{
@@ -39,14 +43,11 @@ void	ft_print_combn(int n)
 	}
 }
 
-void	check_n_and_init(int n, int *nb_char)
+void	init(int n, int *nb_char)
 {
 	int	index;
 
-	if (n < 1 || n > 9)
-	{
-		return ;
-	}
+
 	index = 0;
 	while (index < n)
 	{

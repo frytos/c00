@@ -13,7 +13,7 @@
 #include <unistd.h>
 
 void	ft_putnbr(int nb);
-void	*recursive_print(int nb, char *nb_char, int index);
+void	recursive_print(int nb, char *nb_char, int index);
 void	reverse_print(char *nb_char);
 void	ft_putchar(char digit);
 
@@ -44,7 +44,7 @@ void	ft_putnbr(int nb)
 	reverse_print(nb_char);
 }
 
-void	*recursive_print(int nb, char *nb_char, int index)
+void	recursive_print(int nb, char *nb_char, int index)
 {
 	if (nb > 9)
 	{

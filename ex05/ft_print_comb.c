@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
+// #include <stdio.h>
 
 void	ft_print_comb(void);
 void	check_to_print(char *nb_to_check, size_t nb_to_check_size);
