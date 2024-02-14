@@ -6,7 +6,7 @@
 /*   By: argrouss <argrouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 08:46:51 by argrouss          #+#    #+#             */
-/*   Updated: 2024/02/12 08:46:59 by argrouss         ###   ########.fr       */
+/*   Updated: 2024/02/14 17:41:37 by argrouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,10 @@ void	reverse_print(char *nb_char)
 	index = 11;
 	while (index >= 0)
 	{
-		ft_putchar(nb_char[index]);
+		if (nb_char[index] != 0)
+		{
+			ft_putchar(nb_char[index]);
+		}
 		index--;
 	}
 }

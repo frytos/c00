@@ -6,7 +6,7 @@
 /*   By: argrouss <argrouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 01:43:02 by argrouss          #+#    #+#             */
-/*   Updated: 2024/02/09 03:28:33 by argrouss         ###   ########.fr       */
+/*   Updated: 2024/02/14 17:47:22 by argrouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,10 +55,10 @@ void	print_duo(int first, int second)
 	duo_string[5] = 44;
 	duo_string[6] = 32;
 	duo_string[7] = '\0';
-	duo_string_size = 8;
+	duo_string_size = 7;
 	if (first == 98 && second == 99)
 	{
-		duo_string_size = duo_string_size - 3;
+		duo_string_size = duo_string_size - 2;
 	}
 	write(1, duo_string, duo_string_size);
 }
