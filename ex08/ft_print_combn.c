@@ -6,7 +6,7 @@
 /*   By: argrouss <argrouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 10:44:45 by argrouss          #+#    #+#             */
-/*   Updated: 2024/02/12 23:58:28 by argrouss         ###   ########.fr       */
+/*   Updated: 2024/02/14 12:53:39 by argrouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,6 @@ void	ft_print_combn(int n)
 void	init(int n, int *nb_char)
 {
 	int	index;
-
 
 	index = 0;
 	while (index < n)
