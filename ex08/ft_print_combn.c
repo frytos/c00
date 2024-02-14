@@ -16,12 +16,14 @@
 void	ft_print_combn(int n);
 void	print_nb(int *nb_char, char n, char is_first);
 void	increment(int *nb_char, char n, char rank);
+void	check_n_and_init(int n, int *nb_char);
 void	ft_putchar(char c);
 
 void	ft_print_combn(int n)
 {
 	int	nb_char[9 + 1];
 
+	check_n_and_init(n, nb_char);
 	print_nb(nb_char, n, 1);
 	while (nb_char[0] != 10 - n || nb_char[n - 1] != 9)
 	{
@@ -37,11 +39,10 @@ void	ft_print_combn(int n)
 	}
 }
 
-void	check_n_and_init(int n, char *nb_char)
+void	check_n_and_init(int n, int *nb_char)
 {
 	int	index;
 
-	index = 0;
 	if (n < 1 || n > 9)
 	{
 		return ;
@@ -117,5 +118,10 @@ void	ft_putchar(char c)
 // 	{
 // 		ft_print_combn(atoi(argv[1]));
 // 	}
+// 	return (0);
+// }
+// int main(void)
+// {
+// 	ft_print_combn(1);
 // 	return (0);
 // }
