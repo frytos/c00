@@ -6,15 +6,15 @@
 /*   By: argrouss <argrouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 19:29:37 by argrouss          #+#    #+#             */
-/*   Updated: 2024/02/14 19:58:05 by argrouss         ###   ########.fr       */
+/*   Updated: 2024/02/14 20:41:08 by argrouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
- #include <stdio.h>
+#include <stdio.h>
 
 void	ft_print_comb(void);
-void	check_to_print(char *nb_to_check, size_t nb_to_check_size);
+void	check_to_print(char *nb, size_t nb_size);
 
 void	ft_print_comb(void)
 {
@@ -43,23 +43,23 @@ void	ft_print_comb(void)
 	}
 }
 
-void	check_to_print(char *nb_to_check, size_t nb_to_check_size)
+void	check_to_print(char *nb, size_t nb_size)
 {
-	if (nb_to_check[0] < nb_to_check[1] && (nb_to_check[1] < nb_to_check[2]))
+	if (nb[0] < nb[1] && (nb[1] < nb[2]))
 	{
-		if ((nb_to_check[0] == 55 && nb_to_check[1] == 56) && nb_to_check[2] == 57)
+		if ((nb[0] == 55 && nb[1] == 56) && nb[2] == 57)
 		{
-			write(1, nb_to_check, nb_to_check_size - 2);
+			write(1, nb, nb_size - 2);
 		}
 		else
 		{
-			write(1, nb_to_check, nb_to_check_size);
+			write(1, nb, nb_size);
 		}	
 	}
 }
 
-int	main(void)
-{
-	ft_print_comb();
-	return (0);
-}
+// int	main(void)
+// {
+// 	ft_print_comb();
+// 	return (0);
+// }
