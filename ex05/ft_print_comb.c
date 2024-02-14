@@ -6,12 +6,12 @@
 /*   By: argrouss <argrouss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 19:29:37 by argrouss          #+#    #+#             */
-/*   Updated: 2024/02/14 20:41:08 by argrouss         ###   ########.fr       */
+/*   Updated: 2024/02/14 20:48:37 by argrouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
+// #include <stdio.h>
 
 void	ft_print_comb(void);
 void	check_to_print(char *nb, size_t nb_size);
